@@ -1,0 +1,2 @@
+<% if (tfversion == '5') { %>latest:^1.1.5.<% } -%>
+<% if (tfversion == '4') { %>latest:^1.1.4.<% } -%>
