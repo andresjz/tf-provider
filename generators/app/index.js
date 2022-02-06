@@ -57,7 +57,12 @@ module.exports = class extends Generator {
     );
 
     this.fs.copyTpl(
-      `${this.templatePath()}/test/terratest/*.go`,
+      `${this.templatePath()}/__tests_/*`,
+      `${this.destinationRoot()}/__tests_`
+    );
+
+    this.fs.copyTpl(
+      `${this.templatePath()}/test/terratest/*`,
       `${this.destinationRoot()}/test`
     );
 
@@ -97,6 +102,26 @@ module.exports = class extends Generator {
     this.fs.copyTpl(
       this.templatePath('_README.md'),
       this.destinationPath('README.md'), {
+      name: this.answers.name,
+      description: this.answers.description,
+      author: this.answers.author,
+      testFramework: this.answers.testFramework
+    }
+    );
+
+    this.fs.copyTpl(
+      this.templatePath('package.json'),
+      this.destinationPath('package.json'), {
+      name: this.answers.name,
+      description: this.answers.description,
+      author: this.answers.author,
+      testFramework: this.answers.testFramework
+    }
+    );
+
+    this.fs.copyTpl(
+      this.templatePath('docker-compose.yml'),
+      this.destinationPath('docker-compose.yml'), {
       name: this.answers.name,
       description: this.answers.description,
       author: this.answers.author,

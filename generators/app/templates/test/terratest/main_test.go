@@ -10,7 +10,7 @@ import (
 func TestTerraformExample(t *testing.T) {
 	// Arrange
 	terraformOptions := &terraform.Options{
-		TerraformDir: "../tf/.",
+		TerraformDir: "./.",
 	}
 	defer terraform.Destroy(t, terraformOptions)
 
@@ -22,5 +22,5 @@ func TestTerraformExample(t *testing.T) {
 
 	outputValue := terraform.Output(t, terraformOptions, "output_name")
 	assert.NotNil(outputValue)
-	assert.Equal("output_value", outputValue)
+	assert.Equal("Hello, World!", outputValue)
 }

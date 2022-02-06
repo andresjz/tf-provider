@@ -25,20 +25,32 @@ Scaffolding / Boilerplate generator for new Terraform provider projects
 - To use generator using Docker, Install [Docker](https://docs.docker.com/engine/install/) `recommended`
 - To use generator using Nodejs, Install [nodejs](https://nodejs.org/en/download/) `pro tip: use nvm`
 
+Once you have Node.js installed, then [install Yeoman](https://yeoman.io).
+
+```shell
+npm install -g yo
+```
+
+Now you can install tfp.
+
+```shell
+npm install -g tfp
+```
+
+**Note**: You can also clone the project from github, and then use `npm link` in the project's root directory. The link will make it so that the terraform project generator will act like you installed it using `npm install -g generator-tf-proj`.
+
+```shell
+npm link
+```
+
 ### Usage
 
 To use the included generator execute the below command in shell and provide your answers to the prompts.
 
-##### With Docker
-
-```sh
-docker run --rm -it -v $(pwd):/generated -e myuid="$(id -u):$(id -g)" sudokar/generator-tf-module
-```
-
 ##### With NodeJs
 
 ```sh
-npx -p yo -p generator-tf-module -c 'yo tf-provider'
+yo tfp
 ```
 
 ##### Prompts
