@@ -2,20 +2,23 @@
 ## Overview
 
 <%= description %>
+
 ## Development
 
 ### Prerequisites
+
+Nothing else than nodejs and docker, all tools are running under docker and listed now in the
+* [terraform-docs](https://github.com/segmentio/terraform-docs)
+* [checkov](https://github.com/segmentio/terraform-docs)
+* [terraform-lint](https://github.com/segmentio/terraform-docs)
+* [terraform-fmt](https://github.com/segmentio/terraform-docs)
+
+But if you want to run something locally you can check:
 
 - [terraform](https://learn.hashicorp.com/terraform/getting-started/install#installing-terraform)
 - [terraform-docs](https://github.com/segmentio/terraform-docs)
 - [pre-commit](https://pre-commit.com/#install)
 - [golang](https://golang.org/doc/install#install)
-
-Additional tools are running under docker and listed now in the
-* [terraform-docs](https://github.com/segmentio/terraform-docs)
-* [checkov](https://github.com/segmentio/terraform-docs)
-* [terraform-lint](https://github.com/segmentio/terraform-docs)
-* [terraform-fmt](https://github.com/segmentio/terraform-docs)
 
 
 ### Configurations

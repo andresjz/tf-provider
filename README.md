@@ -2,6 +2,8 @@
 
 Scaffolding / Boilerplate generator for new Terraform provider projects
 
+https://www.npmjs.com/package/generator-tfp
+
 ### Features
 
 - `main.tf`, `variables.tf`,`outputs.tf` files to provider tf path
